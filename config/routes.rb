@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  get "/pages/:page" => "pages#show"
+  root to: 'pages#show'
+
+  # get "/pages" => "pages#show"
+
+  get 'parse_input' => 'pages#show'
+  post 'pages/parse_input'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

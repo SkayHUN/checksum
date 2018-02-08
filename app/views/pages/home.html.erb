@@ -1,3 +1,17 @@
-<h2>Home Page</h2>
-
-<p>asdasd</p>
+<div class="row">
+  <div id="content" class="col-offset-xs-2 col-xs-8 mt50">
+    <%= form_tag(action: :parse_input) do %>
+      <div class="form-group">
+        <label for="input">Input</label>
+        <input type="text" class="form-control" id="input" placeholder="input" name="input">
+      </div>
+      <input class="btn btn-default" type="submit" value="Submit">
+    <% end %>
+  </div>
+  <div class="col-offset-xs-2 col-xs-8">
+    <div class="form-group mt50">
+      <label>Output</label>
+      <p class="output"> <%= @output %> </p>
+    </div>
+  </div>
+</div>
