@@ -11,6 +11,7 @@ gem 'pg'
 gem 'pry'
 gem 'pry-nav'
 gem 'awesome_print'
+gem 'rspec-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

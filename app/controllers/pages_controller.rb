@@ -7,7 +7,7 @@ class PagesController < ApplicationController
   end
 
   def parse_input
-    @output = asd(params[:input])
+    @output = sum(params[:input])
     render :home
   end
 
