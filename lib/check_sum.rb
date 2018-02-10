@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# logic of checksum
 module CheckSum
   def sum(str)
     modified = str_modifier(str)
@@ -34,25 +37,21 @@ module CheckSum
 
     chars.each do |c|
       if c != ' '
-        if vowels.include?(c)  #vowels
+        if vowels.include?(c)  # vowels
           if upcase_vowel && double_consonants
             c = c.upcase
           end
-
           if upcase_vowels.include?(c)
             upcase_vowel = true
           else
             upcase_vowel = false
           end
-
           double_consonants = false
           prev_char_consonant = false
-        else   # consonants
-          if prev_char_consonant
-            double_consonants = true
-          else
-            prev_char_consonant = true
-          end
+        elsif prev_char_consonant # consonants
+          double_consonants = true
+        else
+          prev_char_consonant = true
         end
       end
       result += c

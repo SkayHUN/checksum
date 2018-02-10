@@ -1,9 +1,12 @@
+# frozen_string_literal: true
+
+# controller for home page
 class PagesController < ApplicationController
   include CheckSum
   # before_action :set_output
 
   def show
-    render template: "pages/home"
+    render template: 'pages/home'
   end
 
   def parse_input
